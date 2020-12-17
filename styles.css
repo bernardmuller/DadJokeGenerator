@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(149, 196, 152);
+}
+
+#joke-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    box-shadow: 0px 0.5em 0.5em -0.4em #1a1a1a;   
+    border-radius: 3em;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;        
+    padding: 20px;
+    text-align: center;    
+}
+
+#header {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;;
+}
+
+#dad-joke {
+    height: 20px;
+}
+
+#gen-btn {  
+    margin-bottom: 2.2em;
+    padding: 4px 20px;
+    border-radius: 3em;
+    border: 1px solid black;
+}
+
+#gen-btn:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+#gen-btn:focus {
+    outline: 0;
+}
