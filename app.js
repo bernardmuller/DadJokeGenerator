@@ -3,8 +3,8 @@
 let dadJoke = document.querySelector('#dad-joke')
 let button = document.querySelector("#gen-btn")
 
-const generateJoke = () => {
-    const joke = getDadJoke();
+const generateJoke = async () => {
+    const joke = await getDadJoke();
     console.log(joke)
     dadJoke.textContent = joke;
 }
@@ -12,9 +12,8 @@ const generateJoke = () => {
 const getDadJoke = async () => {
     const config = {headers: { Accept: 'application/json', }};
     const res = await axios.get('https://icanhazdadjoke.com/', config);
-    const joke = res.data.joke
-    //console.log(joke)
-    dadJoke.textContent = joke;
+    const joke = res.data.joke;   
+    return joke
 }
 
-button.addEventListener('click', getDadJoke )
+button.addEventListener('click', generateJoke)
